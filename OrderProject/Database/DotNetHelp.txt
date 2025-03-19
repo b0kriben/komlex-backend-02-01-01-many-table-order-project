@@ -1,0 +1,6 @@
+﻿﻿﻿﻿dotnet tool install --global dotnet-ef
+//Sqlite
+dotnet ef dbcontext scaffold "Data Source=Database\DATABASE.db" Microsoft.EntityFrameworkCore.Sqlite -o Models
+dotnet ef dbcontext scaffold "Data Source=Database\order.db" Microsoft.EntityFrameworkCore.Sqlite -o ModelsSqlite -f
+//MySQL
+dotnet ef dbcontext scaffold "Server=localhost;Database=DATABASE;User=root;Password=;" Pomelo.EntityFrameworkCore.MySql -o Models
